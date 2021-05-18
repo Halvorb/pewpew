@@ -2,12 +2,14 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour {
     public GameObject projectile;
-    public Transform gun1;
+    public Transform[] guns;
     
     void Update() {
         var firing = Input.GetKeyDown(KeyCode.Space);
         if (firing) {
-            Instantiate(projectile, gun1.position, gun1.rotation);
+            foreach (var gun in guns) {
+                Instantiate(projectile, gun.position, gun.rotation);    
+            }
         }
     }
 }
