@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class WSADControls : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    public float speed = 21f;
     void Update()
     {
+        var horizontal = Input.GetAxis("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
         
+        transform.Translate(horizontal * Time.deltaTime * speed, 0, vertical * Time.deltaTime * speed);
+        
+
+
     }
 }
