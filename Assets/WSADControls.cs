@@ -5,7 +5,7 @@ using UnityEngine;
 public class WSADControls : MonoBehaviour
 {
 
-    public float speed = 21f;
+    public float speed = 15f;
     void Update()
     {
         var horizontal = Input.GetAxis("Horizontal");
